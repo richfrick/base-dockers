@@ -54,5 +54,6 @@ RUN	DEBIAN_FRONTEND=noninteractive apt-get update \
 
 COPY consumer.sh /usr/local/bin/consumer.sh
 COPY performance-tester.sh /usr/local/bin/performance-tester.sh
+COPY producer.sh /usr/local/bin/producer.sh
 
 CMD ["/usr/local/bin/consumer.sh"]

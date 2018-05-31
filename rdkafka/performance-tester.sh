@@ -30,7 +30,7 @@ _terminate() {
 
 trap _terminate 0
 
-# Start up a consumer so that rdkafka_performance can measure latency as well 
+# Start up a consumer so that rdkafka_performance can measure latency as well
 rdkafka_performance -C \
     -l \
     -t $TOPIC \

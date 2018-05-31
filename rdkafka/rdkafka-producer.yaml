@@ -1,19 +1,19 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: rdkafka-performance
+  name: rdkafka-producer
   namespace:
   labels:
-    run: rdkafka-performance
+    run: rdkafka-producer
 spec:
   template:
     metadata:
-      name: rdkafka-performance
+      name: rdkafka-producer
     spec:
       containers:
-        - name: rdkafka-performance
-          image: apricer/rdkafka:0.11.4
-          command: ["/usr/local/bin/performance-tester.sh"]
+        - name: rdkafka-producer
+          image: richardfrick/rdkafka:0.11.4
+          command: ["/usr/local/bin/producer.sh"]
           env:
           - name: BROKER
             value: ""
